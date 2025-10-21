@@ -36,14 +36,14 @@
 
     /* === LIGHT DELETE BUTTON === */
     .btn-delete {
-      color: #999; /* soft gray */
+      color: #999;
       font-weight: bold;
       text-decoration: none;
       cursor: pointer;
       transition: color 0.3s ease, transform 0.2s ease;
     }
     .btn-delete:hover {
-      color: #ff6b6b; /* coral red */
+      color: #ff6b6b;
       transform: scale(1.2);
     }
   </style>
@@ -263,8 +263,12 @@
       };
 
       alert('Order confirmed successfully! Thank you, ' + orderData.name + '.');
+
+      // 🟢 Cart cleared and count reset
+      cart = [];
       localStorage.removeItem('cart');
       updateCartDisplay();
+
       document.getElementById('order-form').reset();
     });
 
